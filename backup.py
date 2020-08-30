@@ -60,6 +60,12 @@ def manageBackupHistory():
         del backupLog[filesToDelele]
 ########################################
 #Execução do programa
+#Checa se pasta existe
+if not os.path.exists(folderName):
+    os.makedirs(folderName)
+if not os.path.exists(folderName):
+    os.makedirs(clientName)
+#Execução do programa
 clientFolderBlueprint = getFolderInfo()
 backupActions()
 sendToBackupFolder()
